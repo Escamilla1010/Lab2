@@ -4,20 +4,29 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>Index</title>
-     <meta charset="UTF-8">
+        <title>Eliminar Video</title>
+    <meta charset="UTF-8"></meta>
   <meta name="description" content="ASP.NET MVC 2 CRUD Video"></meta>
   <meta name="keywords" content="ASP.NET, MVC, Facpya"></meta>
   <meta name="author" content="Angel Alejandro Escamilla Villarreal"></meta>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-</head> 
+    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+</head>
 <body>
-    <h1>Menu de Opciones</h1>
-    <a href="/Video/Create">Agregar Video</a>
-    <br />  
-    <a href="../Video/Edit">Editar Video</a>
-    <br />  
-    <a href="../Video/Delete">Eliminar Video</a>
+
+ <form action="/Video/Delete" method="post">
+    <fieldset> 
+    <legend> Video a Eliminar</legend>
+
+        <label for="idVideo">Video ID</label>
+        <input type="text" name="idVideo" />
+                
+        <input type="submit" value="Eliminar" />
+
+
+
+    </fieldset>
+    </form>
 
 
 </body>
