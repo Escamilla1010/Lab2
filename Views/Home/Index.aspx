@@ -18,6 +18,8 @@
     <a href="../Video/Edit">Editar Video</a>
     <br />  
     <a href="../Video/Delete">Eliminar Video</a>
+    <br />  
+    <a href="../Video/Search">Buscar Video</a>
 
 
 </body>

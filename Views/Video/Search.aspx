@@ -4,11 +4,20 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>Index</title>
+    <title>Search</title>
 </head>
 <body>
-    <h1>Lista de Videos</h1>
 
+
+<form action="/Video/Search" method="post">
+    <fieldset> 
+    <legend> Datos del Video</legend>
+
+        <label for="idVideo">Video ID</label>
+        <input type="text" name="idVideo" />
+         <input type="submit" value="Buscar" />
+    </fieldset>
+    </form>
 
 </body>
 </html>
