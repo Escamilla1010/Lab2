@@ -26,13 +26,13 @@ namespace MVCLaboratorio.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(int idVideo, string titulo, int repro, string url)
+        public ActionResult Create(int idVideo, string titulo, int reproducciones, string url)
         {
             //Guardar el video
             List<SqlParameter> parametros = new List<SqlParameter>();
             parametros.Add(new SqlParameter("@idVideo", idVideo));
             parametros.Add(new SqlParameter("@titulo", titulo));
-            parametros.Add(new SqlParameter("@repro", repro));
+            parametros.Add(new SqlParameter("@reproducciones", reproducciones));
             parametros.Add(new SqlParameter("@url", url));
 
             BaseHelper.ejecutarSentencia("sp_video_insertar", CommandType.StoredProcedure, parametros);
@@ -57,10 +57,20 @@ namespace MVCLaboratorio.Controllers
             return View();
         }
 
+
         [HttpPost]
-        public ActionResult Edit(int idVideo, string titulo, int repro, string url)
+        public ActionResult Edit(int idVideo, string titulo, int reproducciones, string url)
         {
-            return View();
+            //Modificar el video
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(new SqlParameter("@idVideo", idVideo));
+            parametros.Add(new SqlParameter("@titulo", titulo));
+            parametros.Add(new SqlParameter("@reproducciones", reproducciones));
+            parametros.Add(new SqlParameter("@url", url));
+
+            BaseHelper.ejecutarSentencia("sp_video_actualizar", CommandType.StoredProcedure, parametros);
+            return RedirectToAction("Index", "Video");
+
         }
 
     }

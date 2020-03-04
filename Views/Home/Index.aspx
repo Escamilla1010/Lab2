@@ -14,7 +14,8 @@
 <body>
     <h1>Menu de Opciones</h1>
     <a href="/Video/Create">Agregar Video</a>
-
+    <br />  
+    <a href="../Video/Edit">Editar Video</a>
 
 
 </body>
