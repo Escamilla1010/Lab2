@@ -92,6 +92,15 @@ namespace MVCLaboratorio.Controllers
             return View("Resultado");
         }
 
+        
+          public ActionResult SeeAll()
+          {
+             
+              ViewData["datavideo"] = BaseHelper.ejecutarConsulta("sp_video_todos", CommandType.StoredProcedure);
+              return View();
+              
+          }
+
 
 
     }
